@@ -1,6 +1,6 @@
 
 <template>
-  <div v-if="alerts.items">
+  <div v-if="alerts.items" id="app">
     <h2>{{ alerts.items[0].created}}</h2>
     <h2>{{ alerts.items[0].SMStext}}</h2>
     <p>{{ alerts.items[0].description}}</p>
@@ -11,19 +11,14 @@
 
 <script src="./Alerts.js"></script>
 
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+<style>
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
 }
 </style>
+
