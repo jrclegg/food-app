@@ -4,7 +4,9 @@ export default {
   data() {
     return {
       alerts: [],
-      errors: []
+      errors: [],
+      lists: [],
+      listErrors: []
     }
   },
   created() {
@@ -14,6 +16,13 @@ export default {
     })
     .catch(e => {
       this.errors.push(e)
+    })
+    axios.get(`https://data.food.gov.uk/food-alerts/id?_limit=10`)
+    .then(response => {
+      this.lists = response.data
+    })
+    .catch(e => {
+      this.listErrors.push(e)
     })
   }
 }
