@@ -1,3 +1,4 @@
+
 import axios from 'axios';
 
 export default {
@@ -6,7 +7,8 @@ export default {
       alerts: [],
       errors: [],
       lists: [],
-      listErrors: []
+      listErrors: [],
+      toggle: false
     }
   },
   created() {
@@ -24,5 +26,5 @@ export default {
     .catch(e => {
       this.listErrors.push(e)
     })
-  }
+  },
 }
