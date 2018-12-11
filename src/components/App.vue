@@ -1,18 +1,18 @@
 
-<template id="list-item">
+<template id="listItem">
 <!-- Single Alert -->
   <div v-if="alert.items" id="app">
     <h2>{{ alert.items[0].SMStext }}</h2>
     <p>{{ alert.items[0].description }}</p>
     <p>{{ alert.items[0].consumerAdvice }}</p>
-    <!-- Search Input -->
+    <!-- Search Box -->
     <h4>Search Alerts</h4>
     <input class="searchInput" type="text" v-model="search" placeholder="search alerts" />
     <!-- List of Alerts -->
-     <button class="showMoreButton" v-on:click="toggle = !toggle">
-       Show/Hide More Allergy Information
-     </button>
-    <div v-for="item in lists.items" :item="item" :key="item.notation">
+    <button class="showMoreButton" v-on:click="toggle = !toggle">
+      Show/Hide More Allergy Information
+    </button>
+    <div v-for="item in lists.items" :key="item.notation">
       <ul>
         <li class="alertList">
           {{ item.title }}
@@ -26,7 +26,7 @@
   </div>
 </template>
 
-
+<!-- Include Alerts Functionality -->
 <script src="./Alerts.js"></script>
 
 
